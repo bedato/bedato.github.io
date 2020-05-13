@@ -7,10 +7,24 @@
     background-repeat: no-repeat;
 }
 
-.about {
+.aboutimg {
     height: 13rem;
+    opacity: 0;
+}
+
+.sae {
+    opacity: 0;
 }
 
 .githubcatto {
     height: 12rem;
+}
+
+body {
+    opacity: 0;
+    transition: 300ms opacity;
+}
+
+.project {
+    opacity: 0;
 }
