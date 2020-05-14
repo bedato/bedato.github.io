@@ -3,9 +3,13 @@ function pageLoaded() {
 }
 window.onload = pageLoaded;
 
+//Home Text Animation
+gsap.to('.mainText', {
+    duration: 2.5,
+    autoAlpha: 1,
+})
 
 //scroll animation
-
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -17,11 +21,9 @@ $.fn.isInViewport = function() {
 $(window).on('resize scroll', function() {
     $('.project').each(function() {
         if ($(this).isInViewport()) {
-            const tl1 = gsap.timeline();
-            tl1.to('.project', {
-                duration: 1,
+            gsap.to('.project', {
+                duration: 1.5,
                 autoAlpha: 1,
-                x: 10
             })
         }
     });
@@ -29,16 +31,15 @@ $(window).on('resize scroll', function() {
     if ($('.aboutimg').isInViewport()) {
         const tl2 = gsap.timeline();
         tl2.to('.aboutimg', {
-            duration: 0.2,
+            duration: 1.2,
             autoAlpha: 1,
-            x: 20
         }).to('.sae', {
-            duration: 0.2,
+            duration: 1.2,
             autoAlpha: 1,
-            x: 20
         })
     }
 
+    //Navbar highlighting
     if ($('#portfolio > h1').isInViewport()) {
         $('.ptfitem').addClass('active')
     } else {
@@ -55,5 +56,9 @@ $(window).on('resize scroll', function() {
         $('.cntitem').addClass('active')
     } else {
         $('.cntitem').removeClass('active')
+    }
+
+    if ($('.cntitem').hasClass('active')) {
+        $('.abtitem').removeClass('active')
     }
 });

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Pavanam&display=swap');
 .masthead {
     height: 100vh;
     min-height: 500px;
@@ -5,10 +6,17 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: 'Crimson Text', serif;
+    letter-spacing: 2px;
+    text-shadow: 5px 4px 4px #000000;
 }
 
 .aboutimg {
     height: 13rem;
+    opacity: 0;
+}
+
+.mainText {
     opacity: 0;
 }
 
@@ -23,6 +31,8 @@
 body {
     opacity: 0;
     transition: 300ms opacity;
+    font-family: 'Pavanam', sans-serif;
+    ;
 }
 
 .project {
