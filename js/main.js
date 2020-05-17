@@ -7,7 +7,7 @@ window.onload = pageLoaded;
 gsap.to('.mainText', {
     duration: 2.5,
     autoAlpha: 1,
-})
+});
 
 //scroll animation
 $.fn.isInViewport = function() {
@@ -24,7 +24,7 @@ $(window).on('resize scroll', function() {
             gsap.to('.project', {
                 duration: 1.5,
                 autoAlpha: 1,
-            })
+            });
         }
     });
 
@@ -36,29 +36,38 @@ $(window).on('resize scroll', function() {
         }).to('.sae', {
             duration: 1.2,
             autoAlpha: 1,
-        })
+        });
     }
 
     //Navbar highlighting
     if ($('#portfolio > h1').isInViewport()) {
-        $('.ptfitem').addClass('active')
+        $('.ptfitem').addClass('active');
     } else {
-        $('.ptfitem').removeClass('active')
+        $('.ptfitem').removeClass('active');
     }
 
     if ($('#about > div.col-md-7 > h2').isInViewport()) {
-        $('.abtitem').addClass('active')
+        $('.abtitem').addClass('active');
     } else {
-        $('.abtitem').removeClass('active')
+        $('.abtitem').removeClass('active');
     }
 
     if ($('#contact > div.col-md-7 > h2').isInViewport()) {
-        $('.cntitem').addClass('active')
+        $('.cntitem').addClass('active');
     } else {
-        $('.cntitem').removeClass('active')
+        $('.cntitem').removeClass('active');
     }
 
     if ($('.cntitem').hasClass('active')) {
-        $('.abtitem').removeClass('active')
+        $('.abtitem').removeClass('active');
     }
+});
+
+//back to top button
+$('.backToTop').click(function(e) {
+    //animate smooth scroll to the top
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, 'slow');
 });

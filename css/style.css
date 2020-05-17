@@ -38,3 +38,12 @@ body {
 .project {
     opacity: 0;
 }
+
+i {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 3.5rem;
+}
