@@ -1,19 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Pavanam&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Pavanam&display=swap");
 .masthead {
     height: 100vh;
     min-height: 500px;
-    background-image: url('https://source.unsplash.com/xrVDYZRGdw4/1920x1080');
+    background-image: url("https://source.unsplash.com/xrVDYZRGdw4/1920x1080");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Crimson Text', serif;
+    font-family: "Crimson Text", serif;
     letter-spacing: 2px;
     text-shadow: 5px 4px 4px #000000;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .aboutimg {
     height: 13rem;
     opacity: 0;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .mainText {
@@ -31,8 +38,7 @@
 body {
     opacity: 0;
     transition: 300ms opacity;
-    font-family: 'Pavanam', sans-serif;
-    ;
+    font-family: "Pavanam", sans-serif;
 }
 
 .project {
@@ -42,6 +48,7 @@ body {
 i {
     color: black;
     font-size: 1.5rem;
+    padding-right: 1rem;
 }
 
 .logo {
