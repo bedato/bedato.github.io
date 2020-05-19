@@ -10,7 +10,7 @@ gsap.to('.mainText', {
 });
 
 //scroll animation
-$.fn.isInViewport = function() {
+$.fn.isInViewport = function () {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop();
@@ -18,8 +18,8 @@ $.fn.isInViewport = function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-$(window).on('resize scroll', function() {
-    $('.project').each(function() {
+$(window).on('resize scroll', function () {
+    $('.project').each(function () {
         if ($(this).isInViewport()) {
             gsap.to('.project', {
                 duration: 1.5,
@@ -31,16 +31,16 @@ $(window).on('resize scroll', function() {
     if ($('.aboutimg').isInViewport()) {
         const tl2 = gsap.timeline();
         tl2.to('.aboutimg', {
-            duration: 1.2,
+            duration: 0.5,
             autoAlpha: 1,
         }).to('.sae', {
-            duration: 1.2,
+            duration: 1,
             autoAlpha: 1,
         });
     }
 
     //Navbar highlighting
-    if ($('#portfolio > h1').isInViewport()) {
+    if ($('#portfolio').isInViewport()) {
         $('.ptfitem').addClass('active');
     } else {
         $('.ptfitem').removeClass('active');
@@ -64,7 +64,7 @@ $(window).on('resize scroll', function() {
 });
 
 //back to top button
-$('.backToTop').click(function(e) {
+$('.backToTop').click(function (e) {
     //animate smooth scroll to the top
     e.preventDefault();
     $('html, body').animate({
